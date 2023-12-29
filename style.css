@@ -19,6 +19,7 @@
 	text-align: center;
 
 	font-size: 150px;
+	font-weight: bold;
 
 	background-color: #003ff1;
 	border-color: #003ff1;
@@ -35,9 +36,13 @@ ul.listaAlfabeto{
 	list-style-type: none;
 }
 
-li.alfabeto, li.sorteado  {
+li.alfabeto, .sorteado  {
 	display: inline-block;
 	list-style-type: none;
+
+	font-size: 20px;
+	font-weight: bold;
+
 
 	height: 10%;
 	width: 10%;
@@ -56,4 +61,8 @@ li.alfabeto, li.sorteado  {
 
 .sorteado {
 	text-decoration: line-through;
+	background-color: #fe9ff8;
+
+	font-weight: unset;
+
 }
