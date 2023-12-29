@@ -35,7 +35,7 @@ ul.listaAlfabeto{
 	list-style-type: none;
 }
 
-li  {
+li.alfabeto, li.sorteado  {
 	display: inline-block;
 	list-style-type: none;
 
@@ -52,4 +52,8 @@ li  {
 
 	border-radius: 10px;
 	
+}
+
+.sorteado {
+	text-decoration: line-through;
 }
