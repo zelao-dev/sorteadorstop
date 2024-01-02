@@ -1,42 +1,103 @@
 console.log("seja bem vindo!")
 
-var alfabeto = new Map ([
-		[0, "A"],
-		[1, "B"],
-		[2, "C"],
-		[3, "D"],
-		[4, "E"],
-		[5, "F"],
-		[6, "G"],
-		[7, "H"],
-		[8, "I"],
-		[9, "J"],
-		[10, "K"],
-		[11, "L"],
-		[12, "M"],
-		[13, "N"],
-		[14, "O"],
-		[15, "P"],
-		[16, "Q"],
-		[17, "R"],
-		[18, "S"],
-		[19, "T"],
-		[20, "U"],
-		[21, "V"],
-		[22, "W"],
-		[23, "X"],
-		[24,"Y"],
-		[25,"Z"]
-]);
-
-console.log(alfabeto.size)
+var alfabeto = [
+		"a",
+		"b",
+		"c",
+		"d",
+		"e",
+		"f",
+		"g",
+		"h",
+		"i",
+		"j",
+		"k",
+		"l",
+		"m",
+		"n",
+		"o",
+		"p",
+		"q",
+		"r",
+		"s",
+		"t",
+		"u",
+		"v",
+		"w",
+		"x",
+		"y",
+		"z"]
 
 function Sortear() {
-	numeroSorteado = Math.floor(Math.random() * 25)
- 	console.log(numeroSorteado)
- 	console.log(alfabeto.get(numeroSorteado))
- 	alfabeto.delete(numeroSorteado)
- 	console.log(alfabeto)
+	if (alfabeto.length > 0) {
+		numeroSorteado = Math.floor(Math.random() * (alfabeto.length - 1))
+	 	console.log("sorteado:",numeroSorteado, alfabeto.at(numeroSorteado))
+	 	
+	 	elementoSorteadoHTML = alfabeto.at(numeroSorteado)
+	 	console.log(elementoSorteadoHTML)
 
+	 	trocarClasse = document.getElementById(elementoSorteadoHTML)
+	 	console.log(trocarClasse)
+	 	trocarClasse.classList.toggle("sorteado");
+
+	 	console.log("número de letras restantes:", alfabeto.length)
+
+	 	alfabeto.splice(numeroSorteado,1)
+
+	} else {
+		alert("todas a letras já foram sorteadas!")
+  	}
   	return 0;
+}
+
+function novoJogo() {
+	alfabeto = [
+		"a",
+		"b",
+		"c",
+		"d",
+		"e",
+		"f",
+		"g",
+		"h",
+		"i",
+		"j",
+		"k",
+		"l",
+		"m",
+		"n",
+		"o",
+		"p",
+		"q",
+		"r",
+		"s",
+		"t",
+		"u",
+		"v",
+		"w",
+		"x",
+		"y",
+		"z"
+	]
+
+	trocarClasse =  document.querySelectorAll("li.sorteado")
+	console.log(trocarClasse.length)
+	
+
+	trocarClasse.forEach(
+		function resetarClasse(token){
+			document.getElementById(token.id).classList.toggle("sorteado")
+		}
+
+
+	)
+
+	alert("Jogo reiniciado!")
+
+	console.log("Jogo reiniciado!")
+	console.log("número de letras restantes:", alfabeto.length)
+
+	
+
+	return 0
 }
