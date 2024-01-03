@@ -1,32 +1,32 @@
 console.log("seja bem vindo!")
 
 var alfabeto = [
-		"a",
-		"b",
-		"c",
-		"d",
-		"e",
-		"f",
-		"g",
-		"h",
-		"i",
-		"j",
-		"k",
-		"l",
-		"m",
-		"n",
-		"o",
-		"p",
-		"q",
-		"r",
-		"s",
-		"t",
-		"u",
-		"v",
-		"w",
-		"x",
-		"y",
-		"z"]
+		"A",
+		"B",
+		"C",
+		"D",
+		"E",
+		"F",
+		"G",
+		"H",
+		"I",
+		"J",
+		"K",
+		"L",
+		"M",
+		"N",
+		"O",
+		"P",
+		"Q",
+		"R",
+		"S",
+		"T",
+		"U",
+		"V",
+		"W",
+		"X",
+		"Y",
+		"Z"]
 
 function Sortear() {
 	if (alfabeto.length > 0) {
@@ -36,9 +36,13 @@ function Sortear() {
 	 	elementoSorteadoHTML = alfabeto.at(numeroSorteado)
 	 	console.log(elementoSorteadoHTML)
 
+	 	//altera o botão do número sorteado
+	 	document.getElementById("letraSorteada").innerHTML =elementoSorteadoHTML
+	 
 	 	trocarClasse = document.getElementById(elementoSorteadoHTML)
 	 	console.log(trocarClasse)
 	 	trocarClasse.classList.toggle("sorteado");
+
 
 	 	console.log("número de letras restantes:", alfabeto.length)
 
@@ -52,32 +56,32 @@ function Sortear() {
 
 function novoJogo() {
 	alfabeto = [
-		"a",
-		"b",
-		"c",
-		"d",
-		"e",
-		"f",
-		"g",
-		"h",
-		"i",
-		"j",
-		"k",
-		"l",
-		"m",
-		"n",
-		"o",
-		"p",
-		"q",
-		"r",
-		"s",
-		"t",
-		"u",
-		"v",
-		"w",
-		"x",
-		"y",
-		"z"
+		"A",
+		"B",
+		"C",
+		"D",
+		"E",
+		"F",
+		"G",
+		"H",
+		"I",
+		"J",
+		"K",
+		"L",
+		"M",
+		"N",
+		"O",
+		"P",
+		"Q",
+		"R",
+		"S",
+		"T",
+		"U",
+		"V",
+		"W",
+		"X",
+		"Y",
+		"Z"
 	]
 
 	trocarClasse =  document.querySelectorAll("li.sorteado")
@@ -92,11 +96,13 @@ function novoJogo() {
 
 	)
 
-	alert("Jogo reiniciado!")
+	document.getElementById("letraSorteada").innerHTML = "..."
+	
 
 	console.log("Jogo reiniciado!")
 	console.log("número de letras restantes:", alfabeto.length)
 
+	alert("Jogo reiniciado!")
 	
 
 	return 0
