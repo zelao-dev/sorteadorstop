@@ -102,7 +102,11 @@ function novoJogo() {
 	console.log("Jogo reiniciado!")
 	console.log("número de letras restantes:", alfabeto.length)
 
-	alert("Jogo reiniciado!")
+	
+
+	window.setTimeout(function mensagemAlerta(){
+                alert("Jogo reiniciado!")
+            }, 100)
 	
 
 	return 0
